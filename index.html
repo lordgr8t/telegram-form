@@ -8,23 +8,20 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<form method="POST" action="send.php">
-		<div class="title_input">Как Вас зовут?</div>
-		<input type="text" placeholder="Введите Ваше имя" name="name">
-		<div class="title_input">Как с Вами связаться?</div>
-		<input type="text" placeholder="Telegram/Вк/Звонок" class="phone_masc" name="phone">
-		<div class="title_input">Сколько вам лет?</div>
-		<select class="mt-1" name="age">
-			<option disabled selected>---</option>
-			<option value="от 10 до 14">от 10 до 14</option>
-			<option value="от 14 до 16">от 14 до 16</option>
-			<option value="от 16 до 18">от 16 до 18</option>
-			<option value="от 18">от 18</option>
-		</select>
-		<div class="title_input">Напишите пару слов о себе</div>
+	<form method="POST" class="mt-3 ml-3" action="send.php">
+		<div class="window pt-1">
+			<h3 class="text-center mt-3">Привет!</h3>
+			<p class="text-center">Отправь мне письмо</p>
 
-		<textarea type="text" name="about" cols="30" rows="10"></textarea> <br>
-		<button type="submit" name="submit" value="submit" class="r_btn">Подать заявку</button>
+			<input type="text" placeholder="Как Вас зовут?" name="name">			
+			<input type="text" placeholder="Telegram/Вк/Звонок" name="phone">					
+			<textarea type="text" placeholder="Напишите пару слов о себе" name="about" cols="30" rows="10"></textarea> 
+		</div>
+		<div class="d-flex jcsb">
+			<button type="cancle" value="Cancel" class="cancel">Отмена</button>
+			<button type="submit" name="submit" value="submit" class="submit">Подать заявку</button>
+		</div>			
+		
 	</form>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	<script src="main.js"></script>

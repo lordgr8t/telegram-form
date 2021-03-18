@@ -19,24 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (isset($_POST['about'])) {
 			if (!empty($_POST['about'])){
 				$about = strip_tags($_POST['about']);
-				$aboutFieldset = "О соискателе:%20";
+				$aboutFieldset = "О Человеке:%20";
 			}
 		}
-		if (isset($_POST['vacancy'])) {
-			if (!empty($_POST['vacancy'])){
-				$vacancy = strip_tags($_POST['vacancy']);
-				$vacancyFieldset = "Должность:%20";
-			}
-		}
-		
-
-
-		$token = "1642225797:AAFqQyPz2swFIUeBd417FSyIv8LPzXv0OVI";
-		$chat_id = "-513290394";
+			
+		$token = "1729618681:AAEjloL8tjQ2gKbwe94RJu--_sX1vYwja6I";
+		$chat_id = "896297808";
 		$arr = array(
 			$unameFieldset => $uname,
-			$uphoneFieldset => $uphone,
-			$vacancyFieldset => $vacancy,			
+			$uphoneFieldset => $uphone,		
 			$aboutFieldset => $about	
 
 		);
@@ -45,20 +36,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		};
 		$sendToTelegram = fopen("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$chat_id."&parse_mode=html&text=".$txt,"r");
 		if ($sendToTelegram == 'false') {
-			echo '<p class="fail"><b>Ошибка. Сообщение не отправлено!</b></p>';
+			echo '<p>Всё пошло по пизде</p>';
 		} else {
-			echo '<h3 style="text-align: center; margin-top: 10%; padding: 10% 10%; background: #DE7070; border-radius: 10px; color: #fff;
-			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));">Спасибо! В ближайшее время мы рассмотрим вашу кандидатуру и свяжемся с вами!</h3>';
-			echo '<a style="text-align: center; font-size: 25px; 	width: 100%; display: block; color: #DE7070;" href="">Вернуться</a>';
+			echo '<h3>Всё гуд</h3>';			
 		}
 	} else {
-		echo '<h3 style="text-align: center; margin-top: 10%; padding: 10% 10%; background: #DE7070; border-radius: 10px; color: #fff;
-		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));">Ошибка. Вы заполнили не все обязательные поля!</h3>';
-		echo '<a style="text-align: center; font-size: 25px; 	width: 100%; display: block; color: #DE7070;" href="">Вернуться</a>';
+		echo '<h3>Не все поля ввёл</h3>';
+		
 
 	}
 } else {
-	header ("Location: http://gr8t.site/"); 
+	header ("Location: http://localhost/telegram-form/"); 
 }
 
 ?>
