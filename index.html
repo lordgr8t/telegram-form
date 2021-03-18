@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Telegram Form</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<form method="POST" action="send.php">
+		<div class="title_input">Как Вас зовут?</div>
+		<input type="text" placeholder="Введите Ваше имя" name="name">
+		<div class="title_input">Как с Вами связаться?</div>
+		<input type="text" placeholder="Telegram/Вк/Звонок" class="phone_masc" name="phone">
+		<div class="title_input">Сколько вам лет?</div>
+		<select class="mt-1" name="age">
+			<option disabled selected>---</option>
+			<option value="от 10 до 14">от 10 до 14</option>
+			<option value="от 14 до 16">от 14 до 16</option>
+			<option value="от 16 до 18">от 16 до 18</option>
+			<option value="от 18">от 18</option>
+		</select>
+		<div class="title_input">Напишите пару слов о себе</div>
+
+		<textarea type="text" name="about" cols="30" rows="10"></textarea> <br>
+		<button type="submit" name="submit" value="submit" class="r_btn">Подать заявку</button>
+	</form>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+</html>
